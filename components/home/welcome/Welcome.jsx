@@ -30,6 +30,7 @@ const Welcome = () => {
             value=""
             onChange={() => {}}
             placeholder="What are you looking for?"
+            multiline
           />
         </View>
         <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>

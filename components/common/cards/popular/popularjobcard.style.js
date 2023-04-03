@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   logoImage: {
     width: "70%",
     height: "70%",
+ 
   },
   companyName: {
     fontSize: SIZES.medium,
@@ -44,9 +45,9 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center",
   },
-  publisher: (selectedJob) => ({
+  publisher: (selectedJob, item) => ({
     fontSize: SIZES.medium - 2,
-    fontFamily: FONT.bold,
+    fontFamily: FONT.regular,
     color: selectedJob === item.job_id ? COLORS.white : COLORS.primary,
   }),
   location: {
