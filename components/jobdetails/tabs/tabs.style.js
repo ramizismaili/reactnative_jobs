@@ -6,6 +6,8 @@ const styles = StyleSheet.create({
   container: {
     marginTop: SIZES.small,
     marginBottom: SIZES.small / 2,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   btn: (name, activeTab) => ({
     paddingVertical: SIZES.medium,
