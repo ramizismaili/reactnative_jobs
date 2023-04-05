@@ -11,10 +11,13 @@ import {
 } from "../components";
 
 const Home = () => {
+  // Get the router object using useRouter hook
   const router = useRouter();
 
-  const [searchTerm, setSearchTerm] = useState('')
+  // Declare and initialize searchTerm state variable with an empty string
+  const [searchTerm, setSearchTerm] = useState("");
 
+  // Render the Home component UI
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
       <StatusBar
@@ -38,19 +41,19 @@ const Home = () => {
       />
 
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={{flex: 1, padding: SIZES.medium}}>
-            <Welcome
+        <View style={{ flex: 1, padding: SIZES.medium }}>
+          <Welcome
             searchTerm={searchTerm}
             setSearchTerm={setSearchTerm}
             handleClick={() => {
-              if(searchTerm) {
-                router.push(`/search/${searchTerm}`)
+              if (searchTerm) {
+                router.push(`/search/${searchTerm}`);
               }
             }}
-            />
+          />
 
-            <Popularjobs />
-            <Nearbyjobs />
+          <Popularjobs />
+          <Nearbyjobs />
         </View>
       </ScrollView>
     </SafeAreaView>
